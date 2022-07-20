@@ -11,8 +11,17 @@
 
 
 const allData = async () => {
-const res = await fetch("https://restcountries.com/v2/all?fields=name,capital,currencies");
-const data = await res.json();
-console.log(data);
+    let response = await fetch('https://restcountries.com/v2/all?fields=name,region,capital,latlang,flag,countrycode');
+    // console.log(response.status);
+    // console.log(response.statusText);
+    // let data;
+    // if (response.status === 200) {
+        let data = await response.json();
+    // }
+    console.log(data);
+    // return data;
 }
 allData();
+    //const data = await response.json();
+    //console.log(data);
+    
